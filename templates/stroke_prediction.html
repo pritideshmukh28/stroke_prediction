@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <h1> Stroke Prediction </h1>
+</head>
+
+<body>
+    <style>
+        body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgb(255, 255, 255);
+                text-shadow: rgb(0, 0, 0);
+                font-size:20px;
+                background-image: url(https://www.narayanahealth.org/blog/wp-content/uploads/2023/03/managing-stroke-1.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 80px;
+                color: #fff;
+                text-align: center;
+                text-shadow: 2px 2px #000000;
+
+            }
+        form  {
+               text-align: center;
+                text-shadow: 2px 2px #000000;
+
+            }
+
+        c :hover {
+            
+            cursor: pointer;
+            background-color: #ff0707;
+            color: #000;
+            }
+
+    </style>
+
+
+
+    
+    <form method="GET" action="/stroke_prediction">
+
+        
+
+        <label>Gender:</label>
+        <select name = "gender">
+            <option value = "Male">Male</option>
+            <option value = "Female">Female</option>
+            <option value = "Other">Other</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Age:</label>
+        <input type = "text" name = "age" step="any" placeholder="Enter Your Age">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Hypertension:</label>
+        <select name = "hypertension">
+            <option value = "1">Yes</option>
+            <option value = "0">No</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Heart Disease:</label>
+        <select name = "heart_disease">
+            <option value = "1">Yes</option>
+            <option value = "0">No</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Ever Married:</label>
+        <select name = "ever_married">
+            <option value = "Yes">Yes</option>
+            <option value = "No">No</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Residence Type:</label>
+        <select name = "Residence_type">
+            <option value = "Urban">Urban</option>
+            <option value = "Rural">Rural</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Average Glucose Level:</label>
+        <input type = "text" name = "avg_glucose_level" step="any" placeholder="Enter Avg Glucose Level">
+        </select>
+
+
+        <br>
+        <br>
+
+        <label>BMI:</label>
+        <input type = "text" name = "bmi" step="any" placeholder="Enter BMI">
+        </select>
+
+        <br>
+        <br>
+
+
+        <label>Work Type:</label>
+        <select name="work_type">
+            <option value="Govt_job">Government Job</option>
+            <option value="Private">Private Job</option>
+            <option value="Self-employed">Self Employed</option>
+            <option value="children">Children</option>
+            <option value="Never_worked">Never Worked</option>
+        </select>
+
+
+        <br>
+        <br>
+
+        <label>Smoking Status:</label>
+        <select name="smoking_status">
+            <option value="smokes">Smokes</option>
+            <option value="formerly smoked">Formerly Smoked</option>
+            <option value="never smoked">Never Smoked</option>
+            <option value="Unknown">Unknown</option>
+
+        </select>
+        
+
+        <br>
+        <br>
+
+
+        <c><input type = "submit" value="SUBMIT"></c>
+
+        <br>
+        <h4><strong>{{prediction}}</strong></h4>
+
+
+    </form>
+
+
+</body>
+</html>
